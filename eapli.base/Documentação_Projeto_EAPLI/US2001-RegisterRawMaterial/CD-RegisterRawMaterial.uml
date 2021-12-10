@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>eapli.base.app.backoffice.console.presentation.rawmaterial.RegisterRawMaterialUI</OriginalElement>
+  <nodes>
+    <node x="244.0" y="0.0">eapli.base.infrastructure.persistence.RepositoryFactory</node>
+    <node x="0.0" y="629.0">eapli.base.rawmaterialmanagement.application.RegisterRawMaterialController</node>
+    <node x="4.0" y="0.0">eapli.framework.presentation.console.AbstractUI</node>
+    <node x="0.0" y="377.0">eapli.base.rawmaterialmanagement.domain.RawMaterial</node>
+    <node x="271.0" y="377.0">eapli.base.rawmaterialmanagement.domain.DataSheet</node>
+    <node x="0.0" y="749.0">eapli.base.infrastructure.persistence.PersistenceContext</node>
+    <node x="526.0" y="629.0">eapli.base.rawmaterialmanagement.application.ListRawMaterialCategoryService</node>
+    <node x="262.0" y="749.0">eapli.base.rawmaterialmanagement.repositories.RawMaterialCategoryRepository</node>
+    <node x="0.0" y="257.0">eapli.base.app.backoffice.console.presentation.rawmaterial.RegisterRawMaterialUI</node>
+    <node x="563.0" y="749.0">eapli.base.rawmaterialmanagement.repositories.RawMaterialRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="eapli.base.app.backoffice.console.presentation.rawmaterial.RegisterRawMaterialUI" target="eapli.framework.presentation.console.AbstractUI">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="103.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8271439811172304" x="575.036660438888" y="385.00808522781324" />
+  <SelectedNodes>
+    <node>eapli.base.rawmaterialmanagement.domain.DataSheet</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>eapli.base.app.backoffice.presentation.machine.RegisterMachineAction</OriginalElement>
+  <nodes>
+    <node x="714.8833333333333" y="276.0">eapli.base.app.backoffice.console.presentation.MainMenu</node>
+    <node x="758.8833333333333" y="0.0">java.lang.FunctionalInterface</node>
+    <node x="0.0" y="220.0">eapli.base.infrastructure.persistence.RepositoryFactory</node>
+    <node x="185.9666666666667" y="144.0">eapli.base.productionlinemanagement.repositories.ProductionLineRepository</node>
+    <node x="248.7166666666667" y="0.0">eapli.base.productionlinemanagement.domain.ProductionLine</node>
+    <node x="778.8833333333333" y="76.0">eapli.framework.actions.Action</node>
+    <node x="112.13333333333335" y="662.0">eapli.base.machinemanagement.application.RegisterMachineController</node>
+    <node x="641.1333333333333" y="176.0">eapli.base.app.backoffice.presentation.machine.RegisterMachineAction</node>
+    <node x="85.4666666666667" y="562.0">eapli.base.infrastructure.persistence.PersistenceContext</node>
+    <node x="858.1333333333333" y="176.0">eapli.base.app.backoffice.presentation.machine.BootstrapMachineAction</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="eapli.base.app.backoffice.console.presentation.MainMenu" target="eapli.base.app.backoffice.presentation.machine.RegisterMachineAction">
+      <point x="-67.5" y="-146.0" />
+      <point x="782.3833333333333" y="251.0" />
+      <point x="739.6333333333333" y="251.0" />
+      <point x="0.0" y="25.0" />
+    </edge>
+    <edge source="eapli.base.app.backoffice.presentation.machine.RegisterMachineAction" target="eapli.framework.actions.Action">
+      <point x="-1.1368683772161603E-13" y="-25.0" />
+      <point x="739.6333333333332" y="151.0" />
+      <point x="814.3833333333333" y="151.0" />
+      <point x="-35.5" y="25.0" />
+    </edge>
+    <edge source="eapli.base.machinemanagement.application.RegisterMachineController" target="eapli.base.productionlinemanagement.repositories.ProductionLineRepository">
+      <point x="0.0" y="-25.0" />
+      <point x="354.1333333333333" y="637.0" />
+      <point x="397.5" y="637.0" />
+      <point x="397.5" y="195.0" />
+      <point x="349.4666666666667" y="195.0" />
+      <point x="54.5" y="13.0" />
+    </edge>
+    <edge source="eapli.framework.actions.Action" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-25.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="eapli.base.infrastructure.persistence.RepositoryFactory" target="eapli.base.productionlinemanagement.repositories.ProductionLineRepository">
+      <point x="0.0" y="-146.0" />
+      <point x="193.5" y="195.0" />
+      <point x="240.4666666666667" y="195.0" />
+      <point x="-54.5" y="13.0" />
+    </edge>
+    <edge source="eapli.base.app.backoffice.presentation.machine.BootstrapMachineAction" target="eapli.framework.actions.Action">
+      <point x="0.0" y="-25.0" />
+      <point x="960.1333333333333" y="151.0" />
+      <point x="885.3833333333333" y="151.0" />
+      <point x="35.5" y="25.0" />
+    </edge>
+    <edge source="eapli.base.app.backoffice.console.presentation.MainMenu" target="eapli.base.app.backoffice.presentation.machine.BootstrapMachineAction">
+      <point x="67.5" y="-146.0" />
+      <point x="917.3833333333333" y="251.0" />
+      <point x="960.1333333333333" y="251.0" />
+      <point x="0.0" y="25.0" />
+    </edge>
+    <edge source="eapli.base.infrastructure.persistence.PersistenceContext" target="eapli.base.infrastructure.persistence.RepositoryFactory">
+      <point x="53.75" y="-25.0" />
+      <point x="246.7166666666667" y="537.0" />
+      <point x="290.25" y="537.0" />
+      <point x="96.75" y="146.0" />
+    </edge>
+    <edge source="eapli.base.productionlinemanagement.repositories.ProductionLineRepository" target="eapli.base.productionlinemanagement.domain.ProductionLine">
+      <point x="0.0" y="-13.0" />
+      <point x="294.9666666666667" y="119.0" />
+      <point x="301.7166666666667" y="119.0" />
+      <point x="-53.0" y="47.0" />
+    </edge>
+    <edge source="eapli.base.machinemanagement.application.RegisterMachineController" target="eapli.base.productionlinemanagement.domain.ProductionLine">
+      <point x="161.33333333333337" y="-25.0" />
+      <point x="515.4666666666667" y="637.0" />
+      <point x="434.9666666666667" y="637.0" />
+      <point x="434.9666666666667" y="119.0" />
+      <point x="407.7166666666667" y="119.0" />
+      <point x="53.0" y="47.0" />
+    </edge>
+    <edge source="eapli.base.machinemanagement.application.RegisterMachineController" target="eapli.base.infrastructure.persistence.PersistenceContext">
+      <point x="-161.33333333333337" y="-25.0" />
+      <point x="0.0" y="25.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="522.5" y="320.0" />
+  <SelectedNodes>
+    <node>eapli.base.productionlinemanagement.repositories.ProductionLineRepository</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

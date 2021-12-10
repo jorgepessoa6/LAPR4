@@ -1,0 +1,25 @@
+title  US ConsultUntreatedNotifications
+
+participant ":Gestor de Chão de Fábrica" as user
+participant ":ConsultUntreatedNotificationsUI" as ui
+participant ":ConsultUntreatedNotificationsController" as controller
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":NotificationRepository" as repo
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+ui-->user:Request information
+user-->ui:Inserts data
+ui-->controller:ui-->controller:consultUntreatedNotificationsByError()
+ui-->controller:ui-->controller:consultUntreatedNotificationsByProductionLine()
+ui-->controller:ui-->controller:consultUntreatedNotificationsByProductionLineAndError()
+ui-->controller:ui-->controller:consultEveryUntreatedNotifications()
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+factory-->repo:create
+factory-->controller:notificationRepository
+controller-->ui:notificationsFiltered()
+ui-->user:Displays Information to the user

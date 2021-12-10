@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products/>
+    <rawMaterials>
+        <rawMaterial>
+            <internalCode name="RM1"/>
+            <description>Verniz de Madeira</description>
+            <category>
+                <code name="CTESTE"/>
+                <description>Test</description>
+            </category>
+        </rawMaterial>
+    </rawMaterials>
+    <rawMaterialCategories/>
+    <deposits/>
+    <productionLines/>
+    <productionOrders/>
+</FactoryFloor>

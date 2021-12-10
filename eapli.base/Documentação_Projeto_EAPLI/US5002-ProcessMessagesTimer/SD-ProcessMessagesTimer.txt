@@ -1,0 +1,140 @@
+title  US Processamento de mensagens com timer
+
+participant ":SPM" as user
+participant ":ProcessMessageSPMController" as ui
+participant ":ProcessingMessagesTask" as task
+participant ":Timer" as timer
+participant ":PersistenceContext" as per
+participant ":RepositoryFactory" as rep
+participant ":MessageRepository" as mr
+participant ":ProductRepository" as pror
+participant ":ProductionLineRepository" as pr
+participant ":ProductionOrderRepository" as por
+participant ":NotificationRepository" as nr
+participant ":RawMaterialRepository" as rmr
+participant ":DepositRepository" as dr
+participant ":ProcessMessageSPMService" as serv
+participant ":Thread" as th
+participant ":ProductionLine" as pl
+participant ":Message" as m
+participant ":MessageType" as mt
+participant ":Machine" as mach
+participant ":Type" as type
+participant ":ProductionOrderExecutionEvent" as event
+participant ":Consumption" as cons
+participant ":Batch" as batch
+participant ":Replacement" as replac
+participant ":DeliverProduction" as deliver
+participant ":DeflectionProduction" as defprod
+participant ":ProductionOrder" as prodOrder
+participant ":Product" as product
+participant ":ProductionRecord" as prodrecord
+participant ":DeflectionConsumption" as defCons
+
+user-->ui:startProcessingMessagesTimer()
+ui-->task: create()
+ui-->timer: create()
+ui-->timer: schedule()
+timer-->task: run()
+task-->per: repositories()
+per-->rep:create()
+task-->rep: productionLines()
+rep-->pr: create()
+task-->pr: productionLineByDesig()
+task-->serv: create()
+task-->th: create()
+task-->th: start
+th-->serv: run()
+serv-->per: repositories()
+per-->rep:create()
+serv-->rep: messages()
+rep--> mr: create()
+serv-->rep: products()
+rep--> pror: create()
+serv-->rep: productionLines()
+rep--> pr: create()
+serv-->rep: productionOrders()
+rep--> por: create()
+serv-->rep: notifications()
+rep--> nr: create()
+serv-->rep: rawMaterials()
+rep--> rmr: create()
+serv-->rep: deposits()
+rep--> dr: create()
+loop
+serv-->pr:productionLineByDesig()
+serv-->pl:setProductionLineStatus()
+serv-->mr:allMessagesToProcessByProductionLine()
+loop for each message
+serv-->m:getMessage()
+serv-->mt:getType()
+serv-->pr:machineByAddress()
+alt machine exist
+alt type.equals(Type.CONSUMO) || type.equals(Type.ENTREGA_PRODUCAO) || type.equals(Type.ESTORNO
+serv-->rmr: containsOfIdentity()
+serv-->dr: containsOfIdentity()
+else type.equals(Type.PRODUCAO)
+serv-->pror: containsOfIdentity()
+else type.equals(Type.INICIO_ACTIVIDADE) || type.equals(Type.FIM_ATIVIDADE)
+serv-->por:productionOrderByDesignation()
+end alt
+end alt
+end loop
+loop for each valid message
+serv-->m:getMach()
+serv-->m:getMessage()
+serv-->mt:getType()
+alt type.equals(Type.INICIO_ACTIVIDADE)
+serv-->por: productionOrderByDesignation()
+serv-->event: create()
+else type.equals(Type.CONSUMO)
+serv-->rmr: rawMaterialByDesignation()
+serv-->dr: depositByDesignation()
+serv-->cons: create()
+serv-->event: addConsumption()
+else type.equals(Type.PRODUCAO)
+serv-->pror:productByDesignation()
+serv-->batch: create()
+serv-->event: addBatch()
+else type.equals(Type.ESTORNO)
+serv-->rmr: rawMaterialByDesignation()
+serv-->dr: depositByDesignation()
+serv-->replac: create()
+serv-->event: addReplacement()
+else type.equals(Type.PARAGEM)
+serv-->serv: saveDate
+else type.equals(Type.RETOMA_ATIVIDADE)
+serv-->serv: calculateStopageTime
+else type.equals(Type.ENTREGA_PRODUCAO)
+serv-->event: getBatch()
+serv-->dr: depositByDesignation()
+serv-->deliver: create()
+serv-->event: addDeliverProduction()
+else type.equals(Type.FIM_ATIVIDADE)
+serv-->cons: create()
+serv-->event: addConsumption()
+serv-->prodOrder:getQuantity()
+serv-->serv: calculateDefProduct
+serv-->defprod:create()
+serv-->event:addDeflectionProd()
+serv-->product: getProductionRecord()
+serv-->prodrecord: getMaterialQuantity()
+serv-->serv: calculateDefConsumption
+serv-->defCons: create()
+serv-->event: addDeflectionCons()
+alt if didn't save the last batch
+serv-->batch: create()
+serv-->event: addBatch()
+end alt
+end alt
+end loop
+serv-->prodOrder: setProdOrderEvent()
+serv-->por: save()
+serv-->pl: setDateLastProcessement()
+serv-->pr: save()
+serv-->th: sleep()
+end loop
+task-->th: join
+ui-->user:Display information
+user-->ui: Accepts
+ui-->user: Operation Success

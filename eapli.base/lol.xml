@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products/>
+    <rawMaterials/>
+    <rawMaterialCategories/>
+    <deposits/>
+    <productionLines>
+        <productionLine>
+            <productionLineId name="1f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="2f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="3f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="4f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="5f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="6f"/>
+        </productionLine>
+    </productionLines>
+    <productionOrders/>
+</FactoryFloor>

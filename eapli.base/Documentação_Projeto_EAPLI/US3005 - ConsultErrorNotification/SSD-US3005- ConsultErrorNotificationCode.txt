@@ -1,0 +1,11 @@
+title  US3005 Consultar Notificações de Erros
+
+participant ":Gestor de Chão de Fábrica" as user
+participant ":Sistema" as system
+
+user-->system:Starts consulting error notifications
+system-->user:Presents the filters available
+user-->system:Selects a filter
+system-->user:Shows all the notifications concerning the applied filter
+
+end

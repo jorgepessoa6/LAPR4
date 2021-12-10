@@ -1,0 +1,11 @@
+title  US Registar Máquina
+
+participant ":Gestor do Chão de Fábrica" as user
+participant ":Sistema" as system
+
+user-->system:Start register of a new machine
+system-->user:Request information
+user-->system:Inserts data
+system-->user:Display Machine Info
+user-->system: Accepts
+system-->user:Operation success

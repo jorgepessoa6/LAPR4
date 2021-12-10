@@ -1,0 +1,36 @@
+title  US Importar catalogo de produtos atraves de ficheiro csv
+
+participant ":Gestor de Producao" as user
+participant ":ImportProductsCsvUI" as ui
+participant ":ImportProductsCsvController" as controller
+participant ":ProductImportService" as svc
+participant ":Product" as prod
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductRepository" as repo
+
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+ui-->user:Request information
+user-->ui:Inserts data
+ui-->controller:importCSV()
+controller-->svc:create
+controller-->svc:importCSV()
+svc-->persistence:repositories()
+persistence-->factory:create
+persistence-->svc:factory
+svc-->factory:products()
+factory-->repo:create
+factory-->svc:ProductRepository
+loop products in csv
+svc-->prod:new Product(codeFactory,codeComercial,unit,category,descBrief,descComplete)
+prod-->svc:produto
+svc-->repo:save(produto)
+end
+svc-->controller:produtos
+controller-->ui:products
+ui-->user:Displays Product Catalog
+user-->ui:Accept
+ui-->user:Operation success

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products>
+        <product>
+            <codeFactory name="7f"/>
+            <codeComercial>7c</codeComercial>
+            <unit>UN</unit>
+            <category>TT_CC</category>
+            <descBrief>bola</descBrief>
+            <descComplete>bola borracha</descComplete>
+        </product>
+        <product>
+            <codeFactory name="8f"/>
+            <codeComercial>8c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CN</category>
+            <descBrief>papel</descBrief>
+            <descComplete>papel premium</descComplete>
+        </product>
+    </products>
+    <rawMaterials/>
+    <rawMaterialCategories/>
+    <deposits/>
+    <productionLines/>
+    <productionOrders/>
+</FactoryFloor>

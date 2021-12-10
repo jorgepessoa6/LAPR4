@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products/>
+    <rawMaterials/>
+    <rawMaterialCategories/>
+    <deposits/>
+    <productionLines/>
+    <productionOrders>
+        <productionOrder>
+            <codeOrder name="100003363"/>
+            <status/>
+            <startExecution>2020-05-14T00:00:00+01:00</startExecution>
+            <unity>UN</unity>
+            <quantity>65000</quantity>
+            <expectedDate>2020-05-27T00:00:00+01:00</expectedDate>
+            <productId>
+                <codeFactory name="1f"/>
+                <codeComercial>1c</codeComercial>
+                <unit>UN</unit>
+                <category>TT-CC</category>
+                <descBrief>bola</descBrief>
+                <descComplete>bola borracha</descComplete>
+            </productId>
+            <encomenda/>
+            <encomenda/>
+        </productionOrder>
+        <productionOrder>
+            <codeOrder name="100003364"/>
+            <status/>
+            <startExecution>2020-05-15T00:00:00+01:00</startExecution>
+            <unity>UN</unity>
+            <quantity>200000</quantity>
+            <expectedDate>2020-05-27T00:00:00+01:00</expectedDate>
+            <productId>
+                <codeFactory name="2f"/>
+                <codeComercial>2c</codeComercial>
+                <unit>UN</unit>
+                <category>TT-CC</category>
+                <descBrief>papel</descBrief>
+                <descComplete>papel</descComplete>
+            </productId>
+            <encomenda/>
+            <encomenda/>
+        </productionOrder>
+    </productionOrders>
+</FactoryFloor>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products/>
+    <rawMaterials/>
+    <rawMaterialCategories/>
+    <deposits/>
+    <productionLines>
+        <productionLine>
+            <productionLineId name="1f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="2f"/>
+        </productionLine>
+    </productionLines>
+    <productionOrders/>
+</FactoryFloor>

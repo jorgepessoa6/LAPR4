@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="xsl1.xsl" type="text/xsl"?>
+<FactoryFloor>
+    <products>
+        <product>
+            <codeFactory name="7f"/>
+            <codeComercial>7c</codeComercial>
+            <unit>UN</unit>
+            <category>TT_CC</category>
+            <descBrief>bola</descBrief>
+            <descComplete>bola borracha</descComplete>
+        </product>
+        <product>
+            <codeFactory name="8f"/>
+            <codeComercial>8c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CN</category>
+            <descBrief>papel</descBrief>
+            <descComplete>papel premium</descComplete>
+        </product>
+        <product>
+            <codeFactory name="1f"/>
+            <codeComercial>1c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>bola</descBrief>
+            <descComplete>bola borracha</descComplete>
+        </product>
+        <product>
+            <codeFactory name="2f"/>
+            <codeComercial>2c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>papel</descBrief>
+            <descComplete>papel</descComplete>
+        </product>
+        <product>
+            <codeFactory name="3f"/>
+            <codeComercial>3c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>bota</descBrief>
+            <descComplete>bota militar</descComplete>
+        </product>
+        <product>
+            <codeFactory name="4f"/>
+            <codeComercial>4c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>camisa</descBrief>
+            <descComplete>camisa premium</descComplete>
+        </product>
+        <product>
+            <codeFactory name="5f"/>
+            <codeComercial>5c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>fe</descBrief>
+            <descComplete>fe e vontade</descComplete>
+        </product>
+        <product>
+            <codeFactory name="6f"/>
+            <codeComercial>6c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>cadeira</descBrief>
+            <descComplete>cadeira madeira</descComplete>
+        </product>
+    </products>
+    <rawMaterials>
+        <rawMaterial>
+            <internalCode name="RM1"/>
+            <description>Verniz de Madeira</description>
+            <category>
+                <code name="CTESTE"/>
+                <description>Test</description>
+            </category>
+        </rawMaterial>
+    </rawMaterials>
+    <rawMaterialCategories>
+        <rawMaterialCategory>
+            <code name="C10"/>
+            <description>Vernizes</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C11"/>
+            <description>Madeiras</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="CTESTE"/>
+            <description>Test</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C1"/>
+            <description>Vernizes</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C2"/>
+            <description>Madeiras</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C3"/>
+            <description>Metais</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C4"/>
+            <description>Tecidos</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C5"/>
+            <description>Plásticos</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C6"/>
+            <description>Lubrificantes</description>
+        </rawMaterialCategory>
+    </rawMaterialCategories>
+    <deposits>
+        <deposit>
+            <cod name="1"/>
+            <description>a</description>
+            <id>23</id>
+        </deposit>
+        <deposit>
+            <cod name="2"/>
+            <description>b</description>
+            <id>24</id>
+        </deposit>
+        <deposit>
+            <cod name="1"/>
+            <description>a</description>
+            <id>43</id>
+        </deposit>
+        <deposit>
+            <cod name="2"/>
+            <description>b</description>
+            <id>44</id>
+        </deposit>
+        <deposit>
+            <cod name="3"/>
+            <description>c</description>
+            <id>45</id>
+        </deposit>
+        <deposit>
+            <cod name="4"/>
+            <description>d</description>
+            <id>46</id>
+        </deposit>
+        <deposit>
+            <cod name="5"/>
+            <description>e</description>
+            <id>47</id>
+        </deposit>
+        <deposit>
+            <cod name="6"/>
+            <description>f</description>
+            <id>48</id>
+        </deposit>
+    </deposits>
+    <productionLines>
+        <productionLine>
+            <productionLineId name="7f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="1f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="2f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="3f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="4f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="5f"/>
+        </productionLine>
+        <productionLine>
+            <productionLineId name="6f"/>
+        </productionLine>
+    </productionLines>
+    <productionOrders>
+        <productionOrder>
+            <codeOrder name="100003363"/>
+            <status>
+                <status>PENDENTE</status>
+            </status>
+            <startExecution>2020-05-14T00:00:00+01:00</startExecution>
+            <unity>UN</unity>
+            <quantity>65000</quantity>
+            <expectedDate>2020-06-12T00:00:00+01:00</expectedDate>
+            <productId>
+                <codeFactory name="1f"/>
+                <codeComercial>1c</codeComercial>
+                <unit>UN</unit>
+                <category>TT-CC</category>
+                <descBrief>bola</descBrief>
+                <descComplete>bola borracha</descComplete>
+            </productId>
+            <encomenda/>
+            <encomenda/>
+        </productionOrder>
+        <productionOrder>
+            <codeOrder name="100003364"/>
+            <status>
+                <status>PENDENTE</status>
+            </status>
+            <startExecution>2020-05-15T00:00:00+01:00</startExecution>
+            <unity>UN</unity>
+            <quantity>200000</quantity>
+            <expectedDate>2020-06-12T00:00:00+01:00</expectedDate>
+            <productId>
+                <codeFactory name="2f"/>
+                <codeComercial>2c</codeComercial>
+                <unit>UN</unit>
+                <category>TT-CC</category>
+                <descBrief>papel</descBrief>
+                <descComplete>papel</descComplete>
+            </productId>
+            <encomenda/>
+            <encomenda/>
+        </productionOrder>
+    </productionOrders>
+    <machines>
+        <machines>
+            <internalCode name="1"/>
+            <seriesNumber>000AA1</seriesNumber>
+            <description>Machine 1</description>
+            <brand>Bosh</brand>
+            <model>k103</model>
+            <productionLine>
+                <productionLineId name="7f"/>
+            </productionLine>
+        </machines>
+    </machines>
+</FactoryFloor>
+

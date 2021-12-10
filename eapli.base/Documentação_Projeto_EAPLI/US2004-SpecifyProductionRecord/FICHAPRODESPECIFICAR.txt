@@ -1,0 +1,67 @@
+title  Especificar ficha de Producao de Produto
+
+participant ":Gestor de Producao" as user
+participant ":SpecityProductionRecordUI" as ui
+participant ":SpecityProductionRecordController" as controller
+participant ":Product" as prod
+participant ":ListRawMaterialService" as svc2
+participant ":ProductImportService" as svc3
+participant ":ProductImportService" as svc
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":RawMaterialRepository" as repo2
+participant ":ProductRepository" as repo
+
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+
+
+controller-->svc2:create()
+svc2-->persistence:repositories()
+persistence-->factory:create
+persistence-->svc2:factory
+svc2-->factory:materials()
+factory-->repo2:create
+factory-->svc2:RawMaterialsRepository
+svc2-->controller:ListRawMaterialService
+loop while there are products to persist
+ui-->controller:rawMaterials()
+controller-->svc2:allRawMaterialCategories
+svc2-->repo2:findAll()
+repo2-->svc2:materials
+svc2-->controller:materials
+controller-->ui:materials
+
+ui-->user:Request material
+user-->ui:Inserts data
+end
+controller-->svc3:create()
+svc3-->persistence:repositories()
+persistence-->factory:create
+persistence-->svc3:factory
+svc3-->factory:products()
+factory-->repo:create
+factory-->svc3:ProductRepository
+svc3-->controller:ListProductsNoProductionRecordService
+
+ui-->controller:products()
+controller-->svc2:productsNoProductionRecord
+svc2-->repo2:allProductsNoProductionRecord()
+repo2-->svc2:products
+svc2-->controller:products
+controller-->ui:products
+
+ui-->user:Request product and remaining data
+user-->ui:Inserts data
+
+ui-->controller:specifyProductionRecord()
+controller-->prod:new Product(codeFactory,codeComercial,unit,category,descBrief,descComplete)
+prod-->controller:produto
+controller-->repo:save(produto)
+controller-->ui:produto
+
+ui-->user:Displays Product Catalog
+user-->ui:Accept
+ui-->user:Operation success

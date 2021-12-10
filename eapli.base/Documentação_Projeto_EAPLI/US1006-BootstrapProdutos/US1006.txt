@@ -1,0 +1,31 @@
+title  US Bootstrapp Categorias de Matérias-Primas
+
+participant ":Gestor de Projeto" as user
+participant ":MainMenu" as system
+participant ":BootstrapProductsAction" as action
+participant ":ProductsBootstrapper" as bootstrap
+participant ":RegisterProductsController" as controller
+participant ":Products" as prod
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductsRepository" as repo
+
+user-->system:Start bootstrapping the information
+system-->user:Presents bootstrapping options
+user-->system:Selects option to bootstrap the Products 
+system-->action: execute()
+action-->bootstrap: execute()
+
+
+loop while there are products to persist
+bootstrap-->controller:registerProduct()
+controller-->prod:new Product(codeFactory,codeComercial,unit,category,descBrief,descComplete)
+prod-->controller:product
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+controller-->factory:products()
+factory-->repo:create
+factory-->controller:ProductRepository
+controller-->repo:save(product)
+end

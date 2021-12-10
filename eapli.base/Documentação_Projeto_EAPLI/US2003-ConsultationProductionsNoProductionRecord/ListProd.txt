@@ -1,0 +1,26 @@
+title  US Listar Produtos sem Ficha de Proucao Definida
+
+participant ":Gestor de Producao" as user
+participant ":ListProductsNoProductionRecordUI" as ui
+participant ":ListProductsNoProductionRecordController" as controller
+participant ":ListProductsNoProductionRecordService" as svc
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductRepository" as repo
+
+user-->ui:Start consultation of the products with no Production Record defined
+ui-->controller:create()
+ui-->controller:listarProdutosSemFIchaProducao()
+controller-->svc:create()
+svc-->persistence:repositories()
+persistence-->factory:create
+persistence-->svc:factory
+svc-->factory:products()
+factory-->repo:create
+repo-->svc:productRepository
+controller-->svc:productsNoProductionRecord()
+svc-->repo:allProductsNoProductionRecord()
+repo-->svc:produtos
+svc-->controller:produtos
+controller-->ui:products
+ui-->user:Displays Products with no Production Record and informs about sucess of operation

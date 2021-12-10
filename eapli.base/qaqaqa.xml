@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products/>
+    <rawMaterials/>
+    <rawMaterialCategories>
+        <rawMaterialCategory>
+            <code name="C10"/>
+            <description>Vernizes</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C11"/>
+            <description>Madeiras</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="CTESTE"/>
+            <description>Test</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C1"/>
+            <description>Vernizes</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C2"/>
+            <description>Madeiras</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C3"/>
+            <description>Metais</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C4"/>
+            <description>Tecidos</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C5"/>
+            <description>Plásticos</description>
+        </rawMaterialCategory>
+        <rawMaterialCategory>
+            <code name="C6"/>
+            <description>Lubrificantes</description>
+        </rawMaterialCategory>
+    </rawMaterialCategories>
+    <deposits/>
+    <productionLines/>
+    <productionOrders/>
+</FactoryFloor>

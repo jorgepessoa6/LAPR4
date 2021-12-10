@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Deposits" type="deposits"/>
+
+  <xs:element name="FactoryFloor" type="factoryFloor"/>
+
+  <xs:element name="Machines" type="machines"/>
+
+  <xs:element name="ProductionLines" type="productionLines"/>
+
+  <xs:element name="ProductionOrders" type="productionOrders"/>
+
+  <xs:element name="Products" type="products"/>
+
+  <xs:element name="RawMaterialCategories" type="rawMaterialCategories"/>
+
+  <xs:element name="RawMaterials" type="rawMaterials"/>
+
+  <xs:element name="deposit" type="deposit"/>
+
+  <xs:element name="machine" type="machine"/>
+
+  <xs:element name="product" type="product"/>
+
+  <xs:element name="productionLine" type="productionLine"/>
+
+  <xs:element name="productionOrder" type="productionOrder"/>
+
+  <xs:element name="productionRecord" type="productionRecord"/>
+
+  <xs:element name="rawMaterial" type="rawMaterial"/>
+
+  <xs:element name="rawMaterialCategory" type="rawMaterialCategory"/>
+
+  <xs:complexType name="factoryFloor">
+    <xs:sequence>
+      <xs:element name="products" type="products" minOccurs="0"/>
+      <xs:element name="rawMaterials" type="rawMaterials" minOccurs="0"/>
+      <xs:element name="rawMaterialCategories" type="rawMaterialCategories" minOccurs="0"/>
+      <xs:element name="deposits" type="deposits" minOccurs="0"/>
+      <xs:element name="productionLines" type="productionLines" minOccurs="0"/>
+      <xs:element name="productionOrders" type="productionOrders" minOccurs="0"/>
+      <xs:element name="machines" type="machines" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="products">
+    <xs:sequence>
+      <xs:element ref="product" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element name="codeFactory" type="designation" minOccurs="0"/>
+      <xs:element name="codeComercial" type="xs:string" minOccurs="0"/>
+      <xs:element name="unit" type="xs:string" minOccurs="0"/>
+      <xs:element name="category" type="xs:string" minOccurs="0"/>
+      <xs:element name="descBrief" type="xs:string" minOccurs="0"/>
+      <xs:element name="descComplete" type="xs:string" minOccurs="0"/>
+      <xs:element name="ProductionRecord" type="productionRecord" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="designation">
+    <xs:sequence/>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="productionRecord">
+    <xs:sequence>
+      <xs:element name="materials" type="rawMaterial" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="quant" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="prod" type="product" minOccurs="0"/>
+      <xs:element name="units" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rawMaterial">
+    <xs:sequence>
+      <xs:element name="internalCode" type="designation" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="category" type="rawMaterialCategory" minOccurs="0"/>
+      <xs:element name="Datasheet" type="dataSheet" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rawMaterialCategory">
+    <xs:sequence>
+      <xs:element name="code" type="designation" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dataSheet">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="rawMaterials">
+    <xs:sequence>
+      <xs:element ref="rawMaterial" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rawMaterialCategories">
+    <xs:sequence>
+      <xs:element ref="rawMaterialCategory" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deposits">
+    <xs:sequence>
+      <xs:element ref="deposit" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="deposit">
+    <xs:sequence>
+      <xs:element name="cod" type="designation" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:long" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productionLines">
+    <xs:sequence>
+      <xs:element ref="productionLine" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productionLine">
+    <xs:sequence>
+      <xs:element name="machines" type="machine" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="productionLineId" type="designation" minOccurs="0"/>
+      <xs:element name="dateLastProcessement" type="xs:dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="machine">
+    <xs:sequence>
+      <xs:element name="internalCode" type="designation" minOccurs="0"/>
+      <xs:element name="seriesNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="brand" type="xs:string" minOccurs="0"/>
+      <xs:element name="model" type="xs:string" minOccurs="0"/>
+      <xs:element ref="productionLine" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productionOrders">
+    <xs:sequence>
+      <xs:element ref="productionOrder" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productionOrder">
+    <xs:sequence>
+      <xs:element name="codeOrder" type="designation" minOccurs="0"/>
+      <xs:element name="status" type="productionOrderStatus" minOccurs="0"/>
+      <xs:element name="startExecution" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="unity" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:int"/>
+      <xs:element name="expectedDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="productId" type="product" minOccurs="0"/>
+      <xs:element name="consumption" type="consumption" minOccurs="0"/>
+      <xs:element name="batch" type="batch" minOccurs="0"/>
+      <xs:element name="encomenda" type="order" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="productionLine" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="productionOrderStatus">
+    <xs:sequence>
+      <xs:element name="status" type="status" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consumption">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="batch">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="order">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="machines">
+    <xs:sequence>
+      <xs:element name="machines" type="machine" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PENDENTE"/>
+      <xs:enumeration value="EM_EXECUCAO"/>
+      <xs:enumeration value="EXECUCAO_PARADA"/>
+      <xs:enumeration value="CONCLUIDA"/>
+      <xs:enumeration value="SUSPENSA"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

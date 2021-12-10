@@ -1,0 +1,31 @@
+title  US Bootstrapp Categorias de Matérias-Primas
+
+participant ":Gestor de Projeto" as user
+participant ":MainMenu" as system
+participant ":BootstrapRawMaterialCategoryAction" as action
+participant ":RawMaterialCategoryBootstrapper" as bootstrap
+participant ":RegisterRawMaterialCategoryController" as controller
+participant ":RawMaterialCategory" as cat
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":RawMaterialCategoryRepository" as repo
+
+user-->system:Start bootstrapping the information
+system-->user:Presents bootstrapping options
+user-->system:Selects option to bootstrap the Raw Materials 
+system-->action: execute()
+action-->bootstrap: execute()
+
+
+loop while there are raw material categories to persist
+bootstrap-->controller:registerRawMaterialCategory()
+controller-->cat:RawMaterialCategory()
+cat-->controller:rawMaterialCategory
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+controller-->factory:categories()
+factory-->repo:create
+factory-->controller:rawMaterialCategoryRepository
+controller-->repo:save()
+end

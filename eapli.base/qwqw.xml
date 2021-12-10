@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products/>
+    <rawMaterials/>
+    <rawMaterialCategories/>
+    <deposits>
+        <deposit>
+            <cod name="1"/>
+            <description>a</description>
+            <id>23</id>
+        </deposit>
+        <deposit>
+            <cod name="2"/>
+            <description>b</description>
+            <id>24</id>
+        </deposit>
+        <deposit>
+            <cod name="1"/>
+            <description>a</description>
+            <id>43</id>
+        </deposit>
+        <deposit>
+            <cod name="2"/>
+            <description>b</description>
+            <id>44</id>
+        </deposit>
+        <deposit>
+            <cod name="3"/>
+            <description>c</description>
+            <id>45</id>
+        </deposit>
+        <deposit>
+            <cod name="4"/>
+            <description>d</description>
+            <id>46</id>
+        </deposit>
+        <deposit>
+            <cod name="5"/>
+            <description>e</description>
+            

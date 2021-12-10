@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FactoryFloor>
+    <products>
+        <product>
+            <codeFactory name="7f"/>
+            <codeComercial>7c</codeComercial>
+            <unit>UN</unit>
+            <category>TT_CC</category>
+            <descBrief>bola</descBrief>
+            <descComplete>bola borracha</descComplete>
+        </product>
+        <product>
+            <codeFactory name="8f"/>
+            <codeComercial>8c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CN</category>
+            <descBrief>papel</descBrief>
+            <descComplete>papel premium</descComplete>
+        </product>
+        <product>
+            <codeFactory name="1f"/>
+            <codeComercial>1c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>bola</descBrief>
+            <descComplete>bola borracha</descComplete>
+        </product>
+        <product>
+            <codeFactory name="2f"/>
+            <codeComercial>2c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>papel</descBrief>
+            <descComplete>papel</descComplete>
+        </product>
+        <product>
+            <codeFactory name="3f"/>
+            <codeComercial>3c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>bota</descBrief>
+            <descComplete>bota militar</descComplete>
+        </product>
+        <product>
+            <codeFactory name="4f"/>
+            <codeComercial>4c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>camisa</descBrief>
+            <descComplete>camisa premium</descComplete>
+        </product>
+        <product>
+            <codeFactory name="5f"/>
+            <codeComercial>5c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>fe</descBrief>
+            <descComplete>fe e vontade</descComplete>
+        </product>
+        <product>
+            <codeFactory name="6f"/>
+            <codeComercial>6c</codeComercial>
+            <unit>UN</unit>
+            <category>TT-CC</category>
+            <descBrief>cadeira</descBrief>
+            <descComplete>cadeira madeira</descComplete>
+        </product>
+    </products>
+    <rawMaterials/>
+    <rawMaterialCategories/>
+    <deposits/>
+    <productionLines/>
+    <productionOrders/>
+</FactoryFloor>

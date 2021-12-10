@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<relatório id="2DF"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.dei.isep.ipp.pt/lprog"
+           xsi:schemaLocation="http://www.dei.isep.ipp.pt/lprog Relatorio.xsd">
+   
+    <páginaRosto>
+        <tema>Relatório final do trabalho de LPROG no âmbito do projeto integrador</tema>
+        <disciplina id="26326">
+            <designação>Linguagens e Programação</designação>
+            <anoCurricular>2</anoCurricular>
+            <sigla>LPROG</sigla>
+        </disciplina>
+        <autor>
+            <nome>Pedro Cardoso</nome>
+            <número>1171171</número>
+            <mail>1171171@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>Miguel Fortes</nome>
+            <número>1171611</número>
+            <mail>1171611@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>Rui Mendes</nome>
+            <número>1170385</número>
+            <mail>1170385@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>Bruno Pereira</nome>
+            <número>1191454</número>
+            <mail>1191454@isep.ipp.pt</mail>
+        </autor>
+        <autor>
+            <nome>Jorge Mendes</nome>
+            <número>1180761</número>
+            <mail>1180761@isep.ipp.pt</mail>
+        </autor>
+        <turma>2DF</turma>
+        <professor sigla="AMD" tipoAula ="T"></professor>
+        <professor sigla="PSM" tipoAula ="TP"></professor>
+        <professor sigla="JRT" tipoAula ="PL"></professor>
+        <logotipoDEI>https://www.dei.isep.ipp.pt/images/logo.png</logotipoDEI>
+        <data>2020-06-14</data>
+    </páginaRosto>
+    <corpo id="SEC1">
+        <introdução tituloSecção="Introdução" id="SEC111">
+            <subsecção id="SUBSEC111">Âmbito do projeto</subsecção>
+            <parágrafo>
+                No âmbito da cadeira
+                <negrito>Linguagens e Programação (LPROG)</negrito>
+                do 2º semestre
+                do 2º ano da Licenciatura em Engenharia Informática (LEI)
+                foi desenvolvido um trabalho cujo principal objectivo é a
+                utilização e explorção das tecnologias XML.
+                O projecto foi elaborado de forma iterativa e integradora,
+                envolvendo a totalidade das Unidades Curriculares.
+                No entanto, apenas a partir do 3º sprint,
+                foram aplicados conhecimentos relativos à disciplina.
+            </parágrafo>
+            <parágrafo>
+                Para o <negrito>Sprint 3 </negrito>foi pedido que se desenvolvessem funcionalidades relativas a:
+            </parágrafo>
+            <parágrafo>
+                ->    Exportar, para um ficehiro XML, informação total ou desejada relativa ao chão de fábrica </parágrafo>
+            <parágrafo>
+                ->    Especificar um documento XSD para validar o XML anteriormente gerado</parágrafo>
+            <parágrafo>
+                 Para o <negrito>Sprint 4</negrito> foi pedido que se desenvolvessem funcionalidades relativas a:
+            </parágrafo>
+            <parágrafo>
+                ->    Transformar um ficheiro XML em HTML, JSON e texto através de um ficehiro XSLT desenvolvido</parágrafo>
+            <parágrafo>
+                ->    Desenvolvimento de um relatório em XML</parágrafo>
+        </introdução>
+        <outrasSecções>
+            <análise  tituloSecção="Análise" id="SEC112">
+                
+                <subsecção id="SUBSEC112">Análise do problema</subsecção>
+                
+                <parágrafo>
+                    Para dar resposta aos requisitos descritos acima, primeiramente
+                    foi nos proposto pelo Gestor de Projecto que desenvolvessemos
+                    uma funcionlidade capaz de exportar para XML toda ou parte dos elementos
+                    consituintes do Chão de Fábrica, com a aplicação opcional de filtros temporais.
+                    Os elementos de domínio a serem exportamos incluem:
+                    </parágrafo>
+                <parágrafo>
+                    ->  Productos</parágrafo>
+                <parágrafo>
+                    ->  Matérias primas</parágrafo>
+                <parágrafo>
+                    ->  Categorias de matérias primas</parágrafo>
+                <parágrafo>
+                    ->  Depósitos</parágrafo>
+                <parágrafo>
+                    ->  Linhas de produção</parágrafo>
+                <parágrafo>
+                    ->  Ordens de Producão</parágrafo>
+                <parágrafo>
+                    ->  Maquinas</parágrafo>
+                <parágrafo>
+                    Onde elementos como Maquinas e Ordens de produção suportam a aplicação
+                    de filtros temporais</parágrafo>
+                
+                <parágrafo> Posto isto, foi necessário, posteriormente, desenvolver um ficheiro XSD
+                    que validasse o ficheiro XML gerado. 
+                </parágrafo>
+                
+                <parágrafo>Com a última iteração do
+                    trabalho (quarto sprint), foi requisitada a criação de ficheiros
+                    XSL, que transformassem o ficheiro XML exportado em ficheiros
+                    HTML, JSON e de texto. Por fim, tivemos a função de escrever 
+                    o presente relatório, a ser validado por um documento XSD, que
+                    nos foi previamente proporcionado, tal como um XSLT, para garantir
+                    uma transformação HTML do mesmo. 
+                </parágrafo>
+            </análise>
+            <linguagem  tituloSecção="Linguagem" id="SEC113">
+                <subsecção id="SUBSEC113">XML</subsecção>
+                
+                <parágrafo>
+                    Para o desenvolvimeno do trabalho foram aplicadas regras de 
+                    sintaxe da XML(Extensible Markup Language).
+                    XML (Extensible Markup Language) é uma recomendação da W3C para gerar linguagens de marcação
+                    para necessidades especiais. É um dos subtipos da SGML (acrônimo de Standard Generalized Markup
+                    Language ou Linguagem Padronizada de Marcação Genérica) capaz de descrever diversos tipos de dados.
+                    Uma das principais vantagens de utilizar esta linguagem é a facilidade de compartilhamento de
+                    informações através da internet.[1]
+                </parágrafo>
+                <parágrafo> Características da linguagem:</parágrafo>
+                <parágrafo>
+                    ->  Separação do conteúdo da formatação</parágrafo>
+                <parágrafo>
+                    ->  Simplicidade e legibilidade, tanto para humanos quanto para computadores</parágrafo>
+                <parágrafo>
+                    ->  Possibilidade de criação de tags sem limitação</parágrafo>
+                <parágrafo>
+                    ->  Criação de arquivos para validação de estrutura (chamados DTDs)</parágrafo>
+                <parágrafo>
+                    ->  Interligação de bancos de dados distintos</parágrafo>
+                <parágrafo>
+                    ->  Concentração na estrutura da informação, e não na sua aparência</parágrafo>
+                <parágrafo>
+                    O XML desenvolvido pelo grupo começa pelo root element <negrito>Factory Floor</negrito>
+                    ao qual vão estar associados um conjunto de :
+                </parágrafo>
+
+                    <parágrafo><negrito>Produtos</negrito>,onde cada produtos possui um atributo id e elementos tais como
+                    o codigo comercial, a unidade, uma descrição breve,a descrição completa, categoria e ficha de produção.</parágrafo>
+                    <parágrafo><negrito>Matérias-primas</negrito>
+                    onde cada matéria-prima possui um um atributo id e os seguintes elementos: a descrição, a categoria,
+                    e uma ficha técnica.</parágrafo>
+                    <parágrafo><negrito>Categorias</negrito> onde cada elemento têm um atributo id e uma descrição.</parágrafo>
+                    <parágrafo><negrito>Linhas de produção</negrito> onde cada elemento têm um identificador de linha.</parágrafo>
+                    <parágrafo><negrito>Ordens de Produção</negrito> onde cada elemento têm um identificador, o produto que está
+                    associado a essa ordem, a sua quantidade, a data da ordem de emissão, a data
+                    final prevista, o estado da ordem de produção e o id da encomenda</parágrafo>
+                    <parágrafo><negrito>Máquinas</negrito> onde cada elemento têm um identificador, o número de série,
+                        a descrição, marca, modelo e linha de produção a que pertence.</parágrafo>
+                <parágrafo>
+                    A exportação para XML ocorreu com a utilização da API Marhsall, onde são marcados os
+                    elementos a exportar com @, e seguidamente no processo de exportação a API encarregua-se
+                    de exportar na hierarquia correta.
+                    A validação da estrutura desses ficheiros é feita através de
+                    um XML Schema (XSD).
+                </parágrafo>
+                
+                <subsecção id="SUBSEC114">XSD</subsecção>
+                
+                <parágrafo>
+                    Para validar os documentos XML foi utilizada a linguagem XML Schema. XML Schema é uma linguagem
+                    baseada no formato XML para definição de regras de validação ("esquemas") em documentos no formato XML.
+                    Foi a primeira linguagem de esquema para XML a obter o status de recomendação por parte do W3C.
+                    Esta linguagem é uma alternativa ao DTD, cuja sintaxe não é baseada no formato XML. Um arquivo
+                    contendo as definições na linguagem XML Schema é chamado de XSD (XML Schema Definition), este
+                    descreve a estrutura de um documento XML.[2]
+                </parágrafo>
+               
+                <parágrafo>
+                    O XSD é capaz de validar a existencia de elementos e
+                    atributos e seus tipos de dados respetivos, como ainda 
+                    verificar como devem estar estruturados os elementos e quais
+                    os seus valores e formatos podem ter. 
+                     
+                </parágrafo>
+				
+                <parágrafo>
+                    Para validação do nosso ficheiro XML criamos um ficheiro XSD.
+                </parágrafo>
+            </linguagem>
+            
+            <transformações  tituloSecção="Transformações" id="SEC114">
+                <subsecção id="SUBSEC116">XSLT(eXtensible Stylesheet Language for Transformation)</subsecção>
+                
+                <parágrafo>
+                    Para poder transformar o documento XML foi utilizada ainda outra linguagem, o XSL Transformations,
+                    ou XSLT (eXtensible Stylesheet Language for Transformation - uma linguagem extensível para folhas de
+                    estilo de transformações), é uma linguagem de marcação XML usada para criar documentos XSL que, por
+                    sua vez, definem a apresentação dos documentos XML nos browsers e outros aplicativos que a suportem.
+                    É importante observar que o documento XSL não altera o documento XML original, ou seja, não cria outro
+                    documento. Neste sentido, o documento XSLT atua como as folhas de estilos CSS: apenas determina como o
+                    browser apresenta o documento XML ao qual ele está associado ou anexado (de uma forma bem parecida à
+                    usada para associar uma folha de estilos CSS a um documento (X)HTML).[3]
+                    O browser recebe o documento XML original, na íntegra, como ele foi criado. E apresenta-o como o
+                    documento XSL determina.  Mas há uma diferença importante entre XSLT e CSS: o documento XSL pode
+                    adicionar conteúdo à apresentação do documento XML no browser, e também pode esconder conteúdo do XML
+                    apresentado no browser.
+                    Portanto, XSLT possibilita transformações mais potentes do que as folhas de estilo CSS.
+                </parágrafo>
+                <parágrafo>
+                    Este por sua vez com a sua própria linguagem de anotação tem como função 
+                    transformar um ficheiro XML noutro ficheiro XML ou noutros tipos 
+                    de documentos alguns dos quais sáo HTML, Json e em Texto, como usado neste projeto.
+                </parágrafo>
+				
+                <parágrafo>
+                    Para transformação para HTML foram construidas várias tabelas para cada template a ser utilizado. Por exemplo para as matérias-primas foi criado uma tabela onde para cada elemento dentro do conjunto é apresentado
+                    o seu id, a sua descrição e a sua categoria.
+                </parágrafo>			
+                <codigo> 
+                    <bloco>
+                        <![CDATA[
+                        <h2>Raw Materials</h2>
+                        <table border="1">
+                            <tr>
+                                <th>Id</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                            </tr>
+                            <xsl:for-each select="FactoryFloor/rawMaterials/rawMaterial">
+                                <tr>
+                                    <td>
+                                        <xsl:value-of select="internalCode/@name"/>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="description"/>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="category/description"/>
+                                    </td>
+                                </tr>
+                            </xsl:for-each>
+                        </table>
+                        ]]>
+                    </bloco>
+                </codigo>
+                <parágrafo>
+                    Para transformação para TXT foram aplicados templates de forma a que a visualização da informação estivesse organizada e de fácil percepção. Por exemplo para depósito foi apresentado
+                    o seu id, e a sua descrição. </parágrafo>
+                <codigo> 
+                    <bloco>
+ <![CDATA[       
+                 
+                <xsl:template match="deposit">
+
+                    <xsl:value-of select="concat('deposit - ',cod/@name, ',', description,',', @id, ' ')"/>
+
+                </xsl:template>
+                
+            
+]]> 
+                    </bloco>
+                </codigo>
+                <parágrafo>
+                    Para transformação para JSON foram aplicados templates de forma a que a leitura pelo utilizador seja clara e perceptível. </parágrafo>
+                     <codigo> 
+                    <bloco>
+                <![CDATA[
+
+
+                     "deposits" : { "deposit" :[{
+
+                     "cod" : {
+                            "name" : "1",
+
+                             },
+                    "description" : "a",
+                             "id" : "23"
+                             }
+
+
+]]>
+            </bloco>
+        </codigo>
+
+     
+				
+            </transformações>        
+        </outrasSecções>
+        <conclusão  tituloSecção="Conclusão" id="SEC115">
+            <parágrafo>  Concluimos assim que todas as funcionalidades
+                requeridas pelos vários utilizadores foram implementadas
+                com sucesso. Apesar de ter existindo um certo nível de dificuldade
+                inicialmente na descoberta da melhor forma para exportar para ficheiro XML
+                a partir de código em Java, uma vez passado esse obstáculo não foram encontradas
+                mais grandes dificuldades na continuação do desenvolvimento.
+            </parágrafo>
+            <parágrafo>As tarefas foram divididas uniformemente,
+                de forma a que todos os elementos pudessem trabalhar nas competências
+                exigidas pela unidade curricular. Podemos assim concluir que
+                o trabalho desenvolvida se enquadrou nas nossas expectativas, 
+                tanto coletivamente como individualmente.
+            </parágrafo>
+                    
+        </conclusão>
+        <referências  tituloSecção="Referências" id="SEC116"><!-- têm TReferencias-->
+            <refBibliográfica idRef="RefB_01">
+                <título>XML definição</título>
+                <dataPublicação>2019-01-01</dataPublicação>
+                <autor>Wikipédia</autor>
+            </refBibliográfica>
+            <refBibliográfica idRef="RefB_02">
+                <título>XSD definição</título>
+                <dataPublicação>2019-01-01</dataPublicação>
+                <autor>Wikipédia</autor>
+            </refBibliográfica>
+            <refBibliográfica idRef="RefB_03">
+                <título>XSL definição</título>
+                <dataPublicação>2019-01-01</dataPublicação>
+                <autor>Wikipédia</autor>
+            </refBibliográfica>
+        </referências>
+    </corpo>
+</relatório>

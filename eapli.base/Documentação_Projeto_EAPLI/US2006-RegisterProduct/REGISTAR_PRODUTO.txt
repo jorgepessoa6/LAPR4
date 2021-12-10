@@ -1,0 +1,31 @@
+title  US Registar Produto
+
+participant ":Gestor de Producao" as user
+participant ":RegisterProductUI" as ui
+participant ":RegisterProductController" as controller
+participant ":Product" as prod
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductRepository" as repo
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+ui-->user:Request information
+user-->ui:Inserts data
+ui-->controller:registerProduct(codeFactory,codeComercial,unit,category,descBrief,descComplete)
+
+controller-->prod:new Product(codeFactory,codeComercial,unit,category,descBrief,descComplete)
+prod-->controller:
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+controller-->factory:products()
+factory-->repo:create
+factory-->controller:productRepository
+controller-->repo:save(product)
+controller-->ui:product
+ui-->user:Display Raw Material Category Info
+user-->ui:Accept
+ui-->user:Operation success
+

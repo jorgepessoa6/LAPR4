@@ -1,0 +1,25 @@
+title  US Add ConfigurationFileToMachine
+
+participant ":Gestor de Chão de Fábrica" as user
+participant ":ImportTXTFileUI" as ui
+participant ":ImportTXTFileController" as controller
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductionLineRepository" as repo
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+ui-->user:Request information
+user-->ui:Inserts data
+ui-->controller:addConfigFile(m, path)
+controller-->Machine:addConfigurationFile()
+Machine-->controller:config
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+factory-->repo:create
+factory-->controller:productionLineRepository
+controller-->repo:save()
+controller-->ui:config
+ui-->user:Operation success

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>eapli.base.app.backoffice.console.presentation.MainMenu</OriginalElement>
+  <nodes>
+    <node x="91.6701388888888" y="1323.0">eapli.base.app.backoffice.console.presentation.MainMenu</node>
+    <node x="298.4375" y="336.0">eapli.base.infrastructure.persistence.RepositoryFactory</node>
+    <node x="0.0" y="806.0">eapli.base.rawmaterialmanagement.application.RegisterRawMaterialController</node>
+    <node x="266.0034722222222" y="1133.0">eapli.base.app.backoffice.console.presentation.rawmaterial.BootstrapRawMaterialAction</node>
+    <node x="141.3449074074074" y="0.0">eapli.base.rawmaterialmanagement.domain.RawMaterial</node>
+    <node x="55.00347222222217" y="1056.0">eapli.framework.presentation.console.AbstractUI</node>
+    <node x="390.4988425925926" y="703.0">eapli.base.infrastructure.persistence.PersistenceContext</node>
+    <node x="198.00347222222217" y="931.0">eapli.base.infrastructure.bootstrapers.demo.RawMaterialBootstrapper</node>
+    <node x="260.80324074074076" y="257.0">eapli.base.rawmaterialmanagement.repositories.RawMaterialRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="eapli.base.rawmaterialmanagement.repositories.RawMaterialRepository" target="eapli.base.rawmaterialmanagement.domain.RawMaterial">
+      <point x="0.0" y="-14.5" />
+      <point x="360.30324074074076" y="232.0" />
+      <point x="329.6782407407407" y="232.0" />
+      <point x="75.33333333333331" y="103.5" />
+    </edge>
+    <edge source="eapli.base.app.backoffice.console.presentation.MainMenu" target="eapli.framework.presentation.console.AbstractUI">
+      <point x="-90.66666666666666" y="-147.5" />
+      <point x="137.00347222222214" y="1303.0" />
+      <point x="150.50347222222217" y="1303.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="eapli.base.infrastructure.bootstrapers.demo.RawMaterialBootstrapper" target="eapli.base.rawmaterialmanagement.application.RegisterRawMaterialController">
+      <point x="-123.66666666666663" y="-37.5" />
+      <point x="259.83680555555554" y="906.0" />
+      <point x="120.25" y="906.0" />
+      <point x="-120.25" y="37.5" />
+    </edge>
+    <edge source="eapli.base.app.backoffice.console.presentation.MainMenu" target="eapli.base.app.backoffice.console.presentation.rawmaterial.BootstrapRawMaterialAction">
+      <point x="90.66666666666671" y="-147.5" />
+      <point x="318.33680555555554" y="1303.0" />
+      <point x="383.5034722222222" y="1303.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="eapli.base.rawmaterialmanagement.application.RegisterRawMaterialController" target="eapli.base.rawmaterialmanagement.repositories.RawMaterialRepository">
+      <point x="60.125" y="-37.5" />
+      <point x="300.625" y="786.0" />
+      <point x="260.3657407407407" y="786.0" />
+      <point x="260.3657407407407" y="311.0" />
+      <point x="310.55324074074076" y="311.0" />
+      <point x="-49.75" y="14.5" />
+    </edge>
+    <edge source="eapli.base.infrastructure.persistence.RepositoryFactory" target="eapli.base.rawmaterialmanagement.repositories.RawMaterialRepository">
+      <point x="0.0" y="-158.5" />
+      <point x="492.9375" y="311.0" />
+      <point x="410.05324074074076" y="311.0" />
+      <point x="49.75" y="14.5" />
+    </edge>
+    <edge source="eapli.framework.presentation.console.AbstractUI" target="eapli.framework.presentation.console.AbstractUI">
+      <point x="-63.66666666666666" y="103.5" />
+      <point x="86.83680555555551" y="1283.0" />
+      <point x="35.00347222222217" y="1283.0" />
+      <point x="35.00347222222217" y="1159.5" />
+      <point x="-95.5" y="-0.0" />
+    </edge>
+    <edge source="eapli.base.infrastructure.persistence.PersistenceContext" target="eapli.base.infrastructure.persistence.RepositoryFactory">
+      <point x="54.25" y="-26.5" />
+      <point x="553.2488425925926" y="678.0" />
+      <point x="590.1875" y="678.0" />
+      <point x="97.25" y="158.5" />
+    </edge>
+    <edge source="eapli.base.rawmaterialmanagement.application.RegisterRawMaterialController" target="eapli.base.rawmaterialmanagement.domain.RawMaterial">
+      <point x="-60.125" y="-37.5" />
+      <point x="180.375" y="786.0" />
+      <point x="222.17824074074076" y="786.0" />
+      <point x="222.17824074074076" y="232.0" />
+      <point x="254.3449074074074" y="232.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="eapli.base.rawmaterialmanagement.application.RegisterRawMaterialController" target="eapli.base.infrastructure.persistence.PersistenceContext">
+      <point x="180.375" y="-37.5" />
+      <point x="420.875" y="786.0" />
+      <point x="444.7488425925926" y="786.0" />
+      <point x="-54.25" y="26.5" />
+    </edge>
+    <edge source="eapli.base.app.backoffice.console.presentation.rawmaterial.BootstrapRawMaterialAction" target="eapli.base.infrastructure.bootstrapers.demo.RawMaterialBootstrapper">
+      <point x="0.0" y="-26.5" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="eapli.base.infrastructure.bootstrapers.demo.RawMaterialBootstrapper" target="eapli.base.infrastructure.persistence.PersistenceContext">
+      <point x="123.66666666666674" y="-37.5" />
+      <point x="507.1701388888889" y="906.0" />
+      <point x="553.2488425925926" y="906.0" />
+      <point x="54.25" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="308.7499999999999" y="684.3333333333333" />
+  <SelectedNodes>
+    <node>eapli.base.app.backoffice.console.presentation.rawmaterial.BootstrapRawMaterialAction</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

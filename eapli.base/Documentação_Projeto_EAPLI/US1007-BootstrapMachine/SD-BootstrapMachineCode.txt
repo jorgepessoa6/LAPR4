@@ -1,0 +1,31 @@
+title  US Bootstrapp das Máquinas
+
+participant ":Gestor de Projeto" as user
+participant ":MainMenu" as system
+participant ":RegisterMachineAction" as action
+participant ":BootstrapMachineAction" as bootstrap
+participant ":RegisterMachineController" as controller
+participant ":ProductionLine" as pl
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductionLineRepository" as repo
+
+user-->system:Start bootstrapping the information
+system-->user:Presents bootstrapping options
+user-->system:Selects option to bootstrap the Machine 
+system-->action: execute()
+action-->bootstrap: execute()
+
+
+loop while there are machines to persist
+bootstrap-->controller:registerMachineUI()
+controller-->pl:ProductionLine()
+pl-->controller:Machine
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+controller-->factory:Machines
+factory-->repo:create
+factory-->controller:productionLineRepositorys
+controller-->repo:save()
+end

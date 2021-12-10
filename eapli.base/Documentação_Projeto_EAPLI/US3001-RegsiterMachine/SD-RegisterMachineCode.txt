@@ -1,0 +1,26 @@
+title  US Registar Máquina
+
+participant ":Gestor de Chão de Fábrica" as user
+participant ":RegisterMachineUI" as ui
+participant ":RegisterMachineController" as controller
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":ProductionLineRepository" as repo
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+ui-->user:Request information
+user-->ui:Inserts data
+ui-->controller:registerMachine()
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+controller-->factory:productionLines()
+factory-->repo:create
+factory-->controller:productionLineRepository
+controller-->repo:save()
+controller-->ui:machine
+ui-->user:Display Machine Info
+user-->ui:Accept
+ui-->user:Operation success

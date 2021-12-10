@@ -1,0 +1,30 @@
+title  US Registar Categoria de Matéria Prima
+
+participant ":Gestor de Projeto" as user
+participant ":RegisterRawMaterialCategoryUI" as ui
+participant ":RegisterRawMaterialCategoryController" as controller
+participant ":RawMaterialCategory" as cat
+participant ":PersistenceContext" as persistence
+participant ":RepositoryFactory" as factory
+participant ":RawMaterialCategoryRepository" as repo
+
+user-->ui:show()
+ui-->ui:doShow()
+ui-->controller:create()
+ui-->user:Request information
+user-->ui:Inserts data
+ui-->controller:registerRawMaterialCategory()
+controller-->cat:RawMaterialCategory()
+cat-->controller:rawMaterialCategory
+controller-->persistence:repositories()
+persistence-->factory:create
+persistence-->controller:factory
+controller-->factory:categories()
+factory-->repo:create
+factory-->controller:rawMaterialCategoryRepository
+controller-->repo:save()
+controller-->ui:rawMaterialCategory
+ui-->user:Display Raw Material Category Info
+user-->ui:Accept
+ui-->user:Operation success
+

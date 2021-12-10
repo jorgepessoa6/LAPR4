@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<product>
+    <codeFactory/>
+    <codeComercial>codeC</codeComercial>
+    <unit>UN</unit>
+    <category>cat</category>
+    <descBrief>teste desc</descBrief>
+    <descComplete>test descCOmplete</descComplete>
+</product>

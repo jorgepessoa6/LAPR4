@@ -1,0 +1,19 @@
+title  US Registar Matéria-Prima
+
+participant ":Gestor de Produção" as user
+participant ":Sistema" as system
+
+user-->system:Start register of a new raw material
+system-->user:Request information
+user-->system:Inserts data
+loop option !=0
+    system->user: Show available Raw Material Categories
+    user-->system:Select Category
+end
+
+
+system-->user:Display Raw Material Info
+user-->system: Accept
+system-->user:Operation success
+
+

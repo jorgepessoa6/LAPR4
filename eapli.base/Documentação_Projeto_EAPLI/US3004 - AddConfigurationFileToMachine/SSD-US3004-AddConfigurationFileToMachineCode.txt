@@ -1,0 +1,13 @@
+title  US Adicionar ficheiro de configuração a uma máquina
+
+participant ":Gestor de Chão de Fábrica" as user
+participant ":Sistema" as system
+
+user-->system:Starts adding a configuration file to a machine
+system-->user:Presents the machines available
+user-->system:Selects a machine
+system-->user: Asks for the path and the name of the file
+user-->system: Provides the information
+system-->user: Informs the user about the sucess of the operation 
+
+end
